@@ -5,16 +5,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "knex:migrate:make":"knex --knexfile ./db/knexfile.ts migrate:make ",
+    "knex:migrate:latest": "knex --knexfile ./db/knexfile.ts migrate:latest",
+    "knex:migrate:rollback": "knex --knexfile ./db/knexfile.ts migrate:rollback",
+    "knex:seed:make":"knex --knexfile ./db/knexfile.ts seed:make",
+    "knex:seed:run": "knex --knexfile ./db/knexfile.ts seed:run"
   },
   "dependencies": {
+    "faker": "^5.5.3",
     "knex": "^0.95.14",
     "next": "12.0.4",
     "pg": "^8.7.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "ts-node": "^10.4.0"
   },
   "devDependencies": {
+    "@types/faker": "^5.5.9",
     "@types/node": "16.11.10",
     "@types/react": "17.0.37",
     "eslint": "7",
